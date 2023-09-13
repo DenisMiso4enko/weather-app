@@ -1,0 +1,21 @@
+.header {
+    background-color: rgba(55, 99, 114, 80%);
+    backdrop-filter: blur(10px);
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.text {
+    font-size: 22px;
+    color: white;
+}

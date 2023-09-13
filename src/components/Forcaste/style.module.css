@@ -1,0 +1,48 @@
+.card {
+    width: 50%;
+    background-color: rgba(28,51,62, 80%);
+    backdrop-filter: blur(4px);
+    border-radius: 40px;
+    padding: 20px;
+}
+
+@media (max-width: 867px) {
+    .card {
+        width: 100%;
+    }
+}
+
+.title {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #8BD05D;
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /*gap: 30px;*/
+}
+
+.temp, .desc, .day {
+    font-size: 24px;
+    color: white;
+}
+
+@media (max-width: 867px) {
+    .temp, .desc, .day {
+        font-size: 18px;
+        color: white;
+    }
+}
+
+.desc {
+    text-transform: capitalize;
+
+}
+
+.day {
+    color: #B4B4B4;
+
+}
