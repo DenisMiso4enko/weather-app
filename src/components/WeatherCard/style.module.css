@@ -1,0 +1,103 @@
+.card {
+    width: 43%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(28,51,62, 80%);
+    backdrop-filter: blur(4px);
+    padding: 20px;
+    border-radius: 40px;
+}
+
+@media (max-width: 867px) {
+    .card {
+        width: 100%;
+    }
+    .temperature {
+        font-size: 70px;
+    }
+}
+
+.info {
+    margin-bottom: 20px;
+}
+
+.city {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: white;
+ }
+
+.descriptions {
+    font-size: 20px;
+    text-transform: capitalize;
+    color: white;
+}
+
+.top, .bottom {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.top {
+    border-bottom: 2px solid white;
+}
+
+.bottom {
+    margin-top: 20px;
+}
+
+.temperature {
+    font-size: 88px;
+    font-weight: 500;
+    color: #8BD05D;
+    text-align: center;
+}
+
+@media (max-width: 867px) {
+    .temperature {
+        font-size: 70px;
+    }
+}
+
+.details {
+    width: 100%;
+}
+
+.itemTitle {
+    color: white;
+}
+
+.value {
+    color: #8BD05D;
+}
+
+.subtitle {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.item {
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+@media (max-width: 867px) {
+    .item {
+        font-size: 18px;
+        color: white;
+    }
+}
+
+.icon {
+    width: 150px;
+    height: 150px;
+}
