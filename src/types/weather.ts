@@ -84,4 +84,4 @@ type City = {
   timezone: number;
 };
 
-interface List extends IWeather {}
+export interface List extends IWeather {}

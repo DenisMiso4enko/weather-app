@@ -1,5 +1,6 @@
 import styles from "./style.module.css";
 import { IForcast } from "../../types/weather";
+import {List} from "../../types/weather";
 
 const DAYS = [
   "Monday",
@@ -9,7 +10,7 @@ const DAYS = [
   "Friday",
   "Saturday",
   "Sunday",
-]; //enum
+]; 
 
 interface ForcastCardProps {
   data: IForcast;
@@ -25,7 +26,7 @@ const Forcast = ({ data }: ForcastCardProps) => {
     <div className={styles.card}>
       <h2 className={styles.title}>7-days forcast</h2>
       <div>
-        {data?.list.map((item: any, index: number) => (
+        {data?.list.map((item: List, index: number) => (
           <div key={index} className={styles.item}>
             <img
               src={`http://openweathermap.org/img/wn/${item?.weather[0]?.icon}.png`}
