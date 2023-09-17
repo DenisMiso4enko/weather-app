@@ -1,20 +1,13 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import { setForcast, setWeather } from "../Slices/weatherSlice";
 import { toast } from "react-toastify";
+import { fetchGetForcast, fetchGetWeather } from "../../api";
 
 export const fetchWeather = createAsyncThunk(
   "weather/fetchWeather",
   async (query: string, { dispatch, rejectWithValue }) => {
-    const currentWeatherFetch = fetch(
-      `${import.meta.env.VITE_WEATHER_URL}/weather?q=${query}&appid=${
-        import.meta.env.VITE_WEATHER_KEY
-      }&units=metric`
-    );
-    const forecastFetch = fetch(
-      `${import.meta.env.VITE_WEATHER_URL}/forecast?q=${query}&appid=${
-        import.meta.env.VITE_WEATHER_KEY
-      }&cnt=7&units=metric`
-    );
+    const currentWeatherFetch = fetchGetWeather(query);
+    const forecastFetch = fetchGetForcast(query);
 
     Promise.all([currentWeatherFetch, forecastFetch])
       .then(async (response) => {

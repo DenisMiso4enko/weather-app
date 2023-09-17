@@ -1,8 +1,8 @@
 import styles from "./style.module.css";
 import { IForcast } from "../../types/weather";
-import {List} from "../../types/weather";
+import { List } from "../../types/weather";
 
-const DAYS = [
+const DAYS: string[] = [
   "Monday",
   "Tuesday",
   "Wednesday",
@@ -10,7 +10,7 @@ const DAYS = [
   "Friday",
   "Saturday",
   "Sunday",
-]; 
+];
 
 interface ForcastCardProps {
   data: IForcast;
